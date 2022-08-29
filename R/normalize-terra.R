@@ -51,7 +51,7 @@ polygonData.SpatVector <- function(obj) {
 # helpers -----------------------------------------------------------------
 
 check_crs_terra <- function(x) {
-  crs <- crs(x)
+  crs <- terra::crs(x)
 
   # Don't have enough information to check
   if (is.na(crs) || (crs==""))
