@@ -61,7 +61,7 @@ check_crs_terra <- function(x) {
     warning("SpatVector layer is not long-lat data", call. = FALSE)
   }
 
-  prj <- crs(x, proj=TRUE)
+  prj <- terra::crs(x, proj=TRUE)
   if (!grepl("+datum=WGS84", prj, fixed = TRUE)) {
     warning(
       "SpatVector layer has inconsistent datum (", prj, ").\n",
